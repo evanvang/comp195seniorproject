@@ -1,0 +1,139 @@
+/* <!-- ==================================         HERO         ======================================= --> */
+.Hero{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  /* min-height: 600px; */
+  padding: 20vh;
+  justify-content: space-evenly;
+  background-image: linear-gradient(to top, #02060c, #001f43, #00307c, #4138b0, #902ad9);  /* 902AD9 &  02060C */
+}
+
+.HeroText{
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+  padding-top: 100px;
+  font-size: x-large;
+  width: 600px;
+}
+
+
+
+
+
+/* <!-- ==================================         SECTION 1         ======================================= --> */
+.Section1Pos{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: auto;
+  padding: 100px 20vw;
+}
+
+.Section1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 20px;
+  width: 75vw;
+}
+
+.Section1Card{
+  aspect-ratio: 1 / 1.6;
+  border: .5vmin solid var(--border);
+  border-width: 1px;
+  cursor: pointer;
+  position: relative;
+  width: 56vmin;
+}
+
+.Section1Card:before{
+  background: linear-gradient(130deg, transparent 0% 3%, #02060c, #001f43, #00307c, #4138b0, #902ad9);
+  background-position: 0% 0%;
+  background-size: 300% 300%;
+  content: "";
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: background-position 350ms ease;
+  width: 100%;
+  z-index: 1;
+}
+
+.Section1Card:hover:before{
+  background-position: 100% 100%;
+  transform: scale(1.08, 1.03);
+
+}
+
+.Section1TitleText{
+  font-size: 40px;
+  padding-top: 300px;
+  margin-top: -30px;
+}
+
+.Section1Text{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  width: 75vw;
+  padding-top: 100px;
+}
+
+.Section1EndText{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  padding-top: 90px;
+  width: 75vw;
+}
+
+/* <!-- ==================================         WAVE         ======================================= --> */
+.layer1{background-image: url('../Universal/Designs/layered-waves-haikei.svg');}
+
+.spacer{
+  aspect-ratio: 900/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  }
+
+
+/* <!-- ==================================         ABOUT ME         ======================================= --> */
+
+
+.AboutMeTitleText{
+  font-size: 50px;
+  padding-bottom: 20px;
+  margin-top: -30px;
+}
+
+.AboutMeText{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  font-size: 20px;
+  width: 75vw;
+  
+}
+
+
+
+/* <!-- ==================================         CARD SECTION POSITIONING         ======================================= --> */
+.CardPos{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: auto;
+  /* min-height: 600px; */
+  padding: 100px 20vw;
+}

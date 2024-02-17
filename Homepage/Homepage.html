@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Homepage</title>
+
+    <link rel="stylesheet" href="../css/cards.css"> 
+    <link rel="stylesheet" href="../Homepage/Homepage.css">
+    <link rel="stylesheet" href="../css/main.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="shortcut icon" href="../Universal/Images/8balllogo.jpg" />
+
+    <script defer src="../Homepage/app.js"></script>
+
+    
+</head>
+<!-- 
+    TODO:
+
+        Add font
+        Add logo in top right
+        Add sections 
+            Nav Bar
+            Intro(OMNI)
+            Fix Certs scale issue
+            footnote
+        
+
+ -->
+<body>
+
+    <!-- ==================================        NAV BAR      ======================================= -->
+    <nav class="Navbar" >
+        <div class="Navbar-Content">
+            <div class="logo">
+                <a class="logo-avatar" href="C:\Users\Ayden\OneDrive\Desktop\html site\AydensWebsite\Homepage\Homepage.html"><img src="../Universal/Images/8balllogo.jpg" alt="Logo"/></a>
+                <h3>Ayden Cabral</h3>
+            </div>
+      
+            <ul class="Navbar-Menu-List">
+                <div class="Navbar-Icon Navbar-Cancel">
+                    <i class = "fas fa-times"></i>
+                </div>
+                <li><a class="Footnote-A" href="#" target="_blank">Home</a></li>
+                <li><a class="Footnote-A" href="#" target="_blank">About Me</a></li>
+                <li><a class="Footnote-A" href="#" target="_blank">Portfolio</a></li>
+                <li><a class="Footnote-A" href="#" target="_blank">Contact Me</a></li>
+            </ul>
+            <div class="Navbar-Icon Navbar-Hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <script>
+                const body = document.querySelector("body");
+                const Navbar = document.querySelector(".Navbar");
+                const NavbarHamburger = document.querySelector(".Navbar-Hamburger");
+                const NavbarCancel = document.querySelector(".Navbar-Cancel");
+                NavbarHamburger.onclick = ()=>{
+                    Navbar.classList.add("show");
+                    NavbarHamburger.classList.add("hide");
+                    body.classList.add("disabled");
+                }
+                NavbarCancel.onclick = ()=>{
+                    body.classList.remove("disabled");
+                    Navbar.classList.remove("show");
+                    NavbarHamburger.classList.remove("hide");
+                }
+                window.onscroll = ()=>{
+                  this.scrollY > 20 ? Navbar.classList.add("sticky") : Navbar.classList.remove("sticky");
+                }
+              </script>
+        </div>
+    </nav>
+
+
+    <!-- ==================================         HERO         ======================================= -->
+    <main class="Hero" id="TopPos">
+
+        <!-- LEFT -->
+        <section class="HeroText">
+            <h1 class="AboutMeTitleText">Welcome Friend...</h1>
+            <p>Welcome to my website! Navigate the homepage by scrolling down or check out one of the many sub pages.</p>
+
+        </section>
+
+        <!-- RIGHT -->
+            <!-- omniman gif -->
+        <img src="../Universal/Images/Omni.GIF" height="500px" width="700px" alt="Omni">
+        
+
+    </main>
+
+
+
+    <!-- ==================================     Section 1     ======================================= -->
+    <main class="Section1Pos Black" id="TopPos">
+        
+
+        <div class="Section1Card"></div>
+        
+        <section class="Section1">
+
+            <section class="Section1Text">
+                <h1 class="Section1TitleText">A Good Resume?</h1>
+                <p>Everyone has that nowadays...</p>
+            </section>
+
+            <section class="Section1Text">
+                <h1 class="Section1TitleText">More Certifications?</h1>
+                <p>Yea, but that isnt enough...</p>
+            </section>
+
+            <section class="Section1Text">
+                <h1 class="Section1TitleText">More Prog Languages?</h1>
+                <p>Already struggling enough as it is...</p>
+            </section>
+
+        </section>
+
+        <h1 class="Section1EndText">A website would be a great idea...</h1>
+    </main>
+
+    
+    <!-- ==================================         WAVE        ======================================= -->
+    <div class="spacer layer1"></div>
+    <!-- ADD A MOVING BOAT??? -->
+
+
+
+
+
+    <!-- ==================================     ABOUT ME     ======================================= -->
+    <main class="BTPGradient Pos">
+
+        <h1 class="#">About Me</h1>
+        
+        <section class="hidden AboutMeText">
+
+            <section class="homepageaboutmetext"></section>
+            <!-- About Me text -->
+            <p>
+                My name is Ayden and I am a third year Computer Science major attending University of the Pacific in Stockton, CA. 
+                After attending Saint Marys High School, I chose to attend Las Positas Community College at the recommendation of 
+                one of my professors at Saint Marys. With no idea of what I wanted to pursue, a good
+                <a class="white" href="https://www.linkedin.com/in/gregory-jimenez-52b396197/" target="_blank">friend </a>
+                put me on the world of technology. From there I chose to pursue a Computer Science degree while earning certifications 
+                through CompTIA. The pandemic paired with the desire to stay with family led me to choose Pacific. Since highschool, I have 
+                been able to earn three certifications, become familiar with around five programming languages, and obtain a part time job in the Information 
+                technology department in the University of the Pacifics Eberhardt School of Buisness.
+            </p>
+            
+            <!-- self photo -->
+            <img src="../Universal/SelfPhotos/DSC_1054.JPG" height="500px" width="700px" alt="Self">
+
+        </section>
+
+    </main>
+
+
+
+
+    
+    <!-- ==================================     CERTIFICATION / PROGRAMMING LANGUAGES     ======================================= -->
+    <main class="CardPos Black">CURRENT CERTIFICATIONS AND KNOWN PROGRAMMING LANGUAGES
+
+      <!-- CERTIFICATION CARDS -->
+        <section class="card-list">
+            <!--    COMPTIA A+       -->
+            <article class="card">
+                <header class="card-header"><p>Feburary 11th, 2022</p> <h2> CompTIA A+ </h2></header>
+                <!-- Card Author -->
+                <div class="card-author">
+                    <a class="author-avatar" href="https://www.comptia.org/home" target="_blank"><img src="../Universal/Images/comptia.png" alt="Net+Logo"/></a>
+                    <svg class="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></svg>
+    
+                <!-- Author Name and Test-->
+                <div class="author-name">
+                <div class="author-name-prefix">CompTIA</div>220-1001 (Core 1) and 220-1002 (Core 2)</div>
+
+                <!-- Author Tags -->
+                <div class="tags"><a href="#">Windows</a><a href="#">Troubleshooting</a></div>
+            </article>
+
+
+            <!--    COMPTIA NET+       -->
+            <article class="card">
+                <header class="card-header"><p>July 27th, 2022</p><h2> CompTIA Network+ </h2></header>
+                <!-- Card Author -->
+                <div class="card-author">
+                    <a class="author-avatar" href="https://www.comptia.org/home" target="_blank"><img src="../Universal/Images/comptia.png" alt="Net+Logo"></a>
+                    <svg class="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></svg>
+    
+                <!-- Author Name and Test-->
+                <div class="author-name">
+                <div class="author-name-prefix">CompTIA</div> N10-008</div>
+
+                <!-- Author Tags -->
+                <div class="tags"><a href="#">TCP/IP</a><a href="#">Routing</a></div>
+            </article>
+
+            <!--    COMPTIA SEC+       -->
+            <article class="card">
+                <header class="card-header"><p>Janurary 16th, 2023</p><h2> CompTIA Security+ </h2></header>
+            <!-- Card Author -->
+                <div class="card-author">
+                    <a class="author-avatar" href="https://www.comptia.org/home" target="_blank"><img src="../Universal/Images/comptia.png" /></a>
+                    <svg class="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></svg>
+    
+                <!-- Author Name and Test-->
+                <div class="author-name">
+                <div class="author-name-prefix">CompTIA</div>SY0-601 </div>
+
+                <!-- Author Tags -->
+                <div class="tags"><a href="#">NetSecurity</a><a href="#">Cybersecurity</a></div>
+            </article>
+
+
+            <!--    CCNA       -->
+            <article class="card">
+                <header class="card-header"><p>Studying</p><h2> CCNA</h2></header>
+                <!-- Card Author -->
+                <div class="card-author">
+                    <a class="author-avatar" href="https://www.cisco.com/site/us/en/index.html" target="_blank"><img src="../Universal/Images/CCNA.png" /></a>
+                    <svg class="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></svg>
+    
+                <!-- Author Name and Test-->
+                <div class="author-name">
+                <div class="author-name-prefix">Cisco</div>Cisco Ceritified Network Associate</div>
+
+                <!-- Author Tags -->
+                <div class="tags"><a href="#">TCP/IP</a><a href="#">VLANS</a></div>
+            </article>
+
+            <!--    JAVA       -->
+            <article class="card">
+                <header class="card-header"><p>Familiar</p><h2> Java</h2></header>
+            <!-- Card Author -->
+                <div class="card-author">
+                    <a class="author-avatar" href="https://www.pacific.edu/" target="_blank"><img src="../Universal/Images/UOP.jpg" /></a>
+                    <svg class="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></svg>
+    
+            <!-- Author Name and Test-->
+                <div class="author-name">
+                <div class="author-name-prefix">University of the Pacific</div> COMP 55 Application Development</div>
+            </article>
+
+            <!--    PYTHON       -->>
+            <article class="card">
+                <header class="card-header"><p>Familiar</p><h2> Python</h2></header>
+                <!-- Card Author -->
+                <div class="card-author">
+                    <a class="author-avatar" href="https://www.pacific.edu/" target="_blank"><img src="../Universal/Images/UOP.jpg" /></a>
+                    <svg class="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></svg>
+
+                <!-- Author Name and Test-->
+                <div class="author-name">
+                <div class="author-name-prefix">University of the Pacific</div>ECPE 170 Computer Systems and Networks</div>
+            </article>
+
+            <!--    C++       -->
+            <article class="card">
+            <header class="card-header"><p>Familiar</p><h2> C++</h2></header>
+                <!-- Card Author -->
+                <div class="card-author">
+                    <a class="author-avatar" href="http://www.laspositascollege.edu/web/logos.php" target="_blank"><img src="../Universal/Images/LP.jpg" /></a>
+                    <svg class="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></svg>
+    
+                <!-- Author Name and Test-->
+                <div class="author-name">
+                <div class="author-name-prefix">Las Positas</div>CS 20 Advanced Programming with Data Structures/C++</div>
+            </article>
+
+            <!--    HTML AND CSS       -->
+            <article class="card">
+            <header class="card-header"><p>Familiar</p><h2> HTML & CSS</h2></header>
+
+                <div class="card-author"><a class="author-avatar" href="#">
+                    <img src="../Universal/SelfPhotos/DSC_0997.JPG" /></a>
+                    <svg class="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></svg>
+    
+                <div class="author-name">
+                    <div class="author-name-prefix">Me</div>This Website lol</div>
+            </article>
+        </section>
+    </main>
+
+    <!-- ==================================        FOOTNOTE      ======================================= -->
+    <footer class="Footnote">
+        <section class="Footnote-Text">
+            <section class="Footnote-BigList">
+                <h1 class="Footnote-MiniTitle">Socials</h1>
+                <a class="socials-avatar" href="https://www.linkedin.com/in/ayden-cabral-ba0103217/" target="_blank"><img src="../Universal/Images/linkedin.svg" /></a>
+            </section>
+
+            <section class="Footnote-List">
+                <h2 class="Footnote-MiniTitle">Employers</h2>
+                <a class="Footnote-A" href="#" target="_blank">About Me</a>
+                <a class="Footnote-A" href="#" target="_blank">Portfolio</a>
+            </section>
+
+            <section class="Footnote-List">
+                <h2 class="Footnote-MiniTitle">Everyone</h2>
+                <a class="Footnote-A" href="#" target="_blank">Home Gym</a>
+                <a class="Footnote-A" href="#" target="_blank">WFH Setup</a>
+            </section>
+
+            <section class="Footnote-List"> 
+                <h2 class="Footnote-MiniTitle">Policies (From my instructors website)</h2>
+                <a class="Footnote-A" href="http://treacle.com/privacy.html" target="_blank">Privacy Policy</a>
+                <a class="Footnote-A" href="http://treacle.com/disclaimer.html" target="_blank">Disclaimer</a>
+                <!-- <p>Privacy</p>
+                <p>Disclaimer</p> -->
+            </section>
+        </section>
+    </footer>
+
+
+</body>
+</html>
