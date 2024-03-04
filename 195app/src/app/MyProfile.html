@@ -64,18 +64,49 @@
                 min-width: 100px; /* Set a minimum width if you want all buttons to have at least a certain width */
                 }
 
-
                 footer {
-                    background-color: #1f1f1f;
-                    padding: 20px;
-                    width: 100%;
-                    position: relative;
-                    bottom: 0;
-                }
+                background-color: #1f1f1f;
+                padding: 20px;
+                position: fixed; /* Stick to bottom */
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Space out the footer sections */
+              }
 
-                .footer-content p, .footer-logo {
-                margin: 0;
-                }
+              .footer-section {
+                display: flex;
+                justify-content: center; /* Center the content horizontally */
+                align-items: center; /* Center the content vertically */
+              }
+
+              .footer-section p {
+                margin: 0 10px; /* Add space between the 'Coming Soon' texts */
+              }
+
+              .footer-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+
+              .footer-logo img {
+                width: 50px; /* Adjust as needed */
+                height: 50px; /* Adjust as needed */
+                margin-right: 10px;
+              }
+
+              .footer-disclaimer {
+                position: absolute;
+                bottom: 10px;
+                right: 20px;
+                font-size: 0.75em;
+                text-align: right;
+              }
+
+
 
                 #header {
                 display: flex;
@@ -151,12 +182,25 @@
   </main>
 
   <footer>
-    <div class="footer-content">
+    <div class="footer-section">
+      <p>Coming Soon</p>
+      <p>Coming Soon</p>
       <p>Coming Soon</p>
     </div>
     <div class="footer-logo">
-      Monarky
+      <img src="path-to-monarky-logo.png" alt="Monarky Logo" /> <!-- Replace with your logo path -->
+      <p>Monarky</p>
     </div>
+    <div class="footer-section">
+      <p>Coming Soon</p>
+      <p>Coming Soon</p>
+      <p>Coming Soon</p>
+    </div>
+    <div class="navigation-dots">
+      <!-- Add your navigation dots here -->
+    </div>
+    <p class="footer-disclaimer">© Monarky, Inc. 2024. We hate our users!</p>
   </footer>
+  
 </body>
 </html>
