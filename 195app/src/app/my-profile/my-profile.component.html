@@ -5,14 +5,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ankush Banipal's Resume</title>
+        <title>XYZ's Resume</title>
         <style>
+            
+                html {
+                height: 100%;
+                }
+
                 body {
                 background-color: #121212;
                 color: #ffffff;
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Make sure the body is at least the height of the viewport */
+
                 }
 
                 nav {
@@ -30,6 +39,7 @@
 
                 main {
                 padding: 20px;
+                flex: 1; /* This will allow the main content to expand and push the footer down */
                 }
 
                 section {
@@ -42,25 +52,61 @@
                 margin: 0;
                 }
 
+
                 button {
                 background-color: #333;
                 color: #fff;
                 border: none;
-                padding: 10px;
+                padding: 10px 10px; /* Adjust horizontal padding to make buttons wider */
                 margin-top: 10px;
                 cursor: pointer;
+                width: auto; /* Set width to auto to adjust with content or set a specific width */
+                min-width: 100px; /* Set a minimum width if you want all buttons to have at least a certain width */
                 }
 
                 footer {
                 background-color: #1f1f1f;
                 padding: 20px;
+                position: fixed; /* Stick to bottom */
+                bottom: 0;
+                left: 0;
+                width: 100%;
                 display: flex;
-                justify-content: space-between;
-                }
+                align-items: center;
+                justify-content: space-between; /* Space out the footer sections */
+              }
 
-                .footer-content p, .footer-logo {
-                margin: 0;
-                }
+              .footer-section {
+                display: flex;
+                justify-content: center; /* Center the content horizontally */
+                align-items: center; /* Center the content vertically */
+              }
+
+              .footer-section p {
+                margin: 0 10px; /* Add space between the 'Coming Soon' texts */
+              }
+
+              .footer-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+
+              .footer-logo img {
+                width: 50px; /* Adjust as needed */
+                height: 50px; /* Adjust as needed */
+                margin-right: 10px;
+              }
+
+              .footer-disclaimer {
+                position: absolute;
+                bottom: 10px;
+                right: 20px;
+                font-size: 0.75em;
+                text-align: right;
+              }
+
+
 
                 #header {
                 display: flex;
@@ -78,9 +124,6 @@
                 object-fit: cover; /* Ensures the image covers the area without being stretched */
                 border: 3px solid #ffffff; /* Optional: Adds a white border around the image */
                 }
-
-                
-
         </style>
     </head>
 <body>
@@ -139,12 +182,25 @@
   </main>
 
   <footer>
-    <div class="footer-content">
+    <div class="footer-section">
+      <p>Coming Soon</p>
+      <p>Coming Soon</p>
       <p>Coming Soon</p>
     </div>
     <div class="footer-logo">
-      Monarky
+      <img src="path-to-monarky-logo.png" alt="Monarky Logo" /> <!-- Replace with your logo path -->
+      <p>Monarky</p>
     </div>
+    <div class="footer-section">
+      <p>Coming Soon</p>
+      <p>Coming Soon</p>
+      <p>Coming Soon</p>
+    </div>
+    <div class="navigation-dots">
+      <!-- Add your navigation dots here -->
+    </div>
+    <p class="footer-disclaimer">© Monarky, Inc. 2024. We hate our users!</p>
   </footer>
+  
 </body>
 </html>
