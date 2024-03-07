@@ -6,7 +6,19 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+@if(authService.currentUserSig() == null){
+  <ul>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/login">Login</a></li>
+  </ul>
+  
+}
+@if(authService.currentUserSig()){
+  <div>
+    <span (click)="logout()">Logout</span>
+  </div>
 <router-outlet></router-outlet>
+}
 <!--<style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
