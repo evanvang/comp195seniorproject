@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Page</title>
+        <style>
+            body {
+              font-family: 'Montserrat';
+              background-color: #121212;
+              color: #ffffff;
+              margin: 0;
+              padding: 0;
+              align-items: center;
+              font-family: 'Montserrat';
+          
+          
+            }
+            .container {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 40px 15px;
+              display: flex;
+              flex-wrap: wrap; /* Allow items to wrap */
+              justify-content: space-between;
+              gap: 40px 0; /* Horizontal and vertical gap */
+            }
+          
+            .MidsectionTitle {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 40px 15px;
+              display: flex;
+              flex-wrap: wrap; /* Allow items to wrap */
+              justify-content: space-between;
+              gap: 40px 0; /* Horizontal and vertical gap */
+              font-size: 35px;
+          
+            }
+          
+            .section1Title{
+              font-size: 35px;
+              display: flex;
+            }
+          
+            .section {
+              width: 100%; /* Full width for smaller screens or default state */
+              margin-bottom: 40px; /* Gap between rows */
+            }
+          
+          
+              .heading {
+                  font-size: 24px;
+                  font-weight: bold;
+                  margin-bottom: 15px;
+              }
+              .section2 {
+                  font-size: 24px;
+                  font-weight: bold;
+                  margin-bottom: 15px;
+          
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: space-between;
+          
+                  gap: 0px 80px; /* Horizontal and vertical gap */
+              }
+          
+              .section2 {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              gap: 75px; /* Adjust the gap to your liking */
+              }
+          
+              .section2 > div, .section2 > .image-placeholder {
+              flex: 1; /* Make both the text div and the image div take up equal space */
+              }
+          
+              /* Assuming you want the text and the image side by side, we set flex-direction to row */
+              @media (min-width: 768px) {
+                  .section2 {
+                      flex-direction: row;
+                  }
+          
+                  .section {
+                      width: calc(50% - 20px); /* Adjust width for 2 columns */
+                      }
+                      .content-with-image {
+                      flex-direction: column;
+                      }
+          
+                      .image-placeholder {
+                      width: auto; /* Full width on smaller screens */
+                      margin-top: 40px; /* Space between text and image on smaller screens */
+                      }
+              }
+          
+              /* Update the responsive layout for section2 */
+              @media (max-width: 768px) {
+                  .section2 {
+                      flex-direction: column;
+                  }
+                  .section2 > div, .section2 > .image-placeholder {
+                      flex-basis: 100%;
+                      max-width: 100%;
+                  }
+              }
+          
+              .text {
+                  font-size: 16px;
+                  line-height: 1.6;
+                  font-weight: normal;
+              }
+          
+              
+              .image-placeholder {
+              flex-basis: 40%; /* Adjust as needed */
+              background-color: #ffffffee; /* White background for the placeholder */
+              display: block; /* Make sure it's a block element */
+              height: 400px;
+              width: 600px; 
+              /* Specify a fixed height if you want a specific aspect ratio */
+              }
+          
+             
+              nav {
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 20px;
+                  background-color: #1f1f1f;
+                  }
+          
+                  nav a {
+                  color: #ffffff;
+                  text-decoration: none;
+                  margin: 0 10px;
+                  }
+        </style>
+    </head>
+    <body>
+    <header>
+        <nav>
+            <a href="">MonkeysResumeTool</a>
+            <div class="menu">
+            <a href="/about">About</a>
+            <a href="#support">Support</a>
+            <a href="/myprofile">Login</a>
+            </div>
+        </nav>
+    </header>
+
+<div class = "container">
+        <p class = "section1Title">EDIT ABOUT</p>
+
+</div>
+
+</body>
+</html>
