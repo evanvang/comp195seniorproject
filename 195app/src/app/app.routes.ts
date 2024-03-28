@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './Index';
 import { AboutComponent } from './About';
+import { MyProfileComponent } from './my-profile/my-profile.component';
 import { NgModule } from '@angular/core';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
