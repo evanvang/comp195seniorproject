@@ -14,9 +14,9 @@
   
 }
 @if(authService.currentUserSig()){
-  <div>
+  <ul>
     <span (click)="logout()">Logout</span>
-  </div>
+  </ul>
 }
 <router-outlet></router-outlet>
 <!--<style>
