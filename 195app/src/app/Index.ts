@@ -8,7 +8,7 @@ import { routes } from './app.routes';
   template: `<router-outlet>`,
   imports: [RouterOutlet, RouterModule],
   templateUrl: './Index.html',
-  styleUrl: './app.component.css'
+  styleUrl: './Index.css'
 })
 export class IndexComponent {
   title = '195app';

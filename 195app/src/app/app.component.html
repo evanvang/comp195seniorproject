@@ -6,6 +6,38 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+@if(authService.currentUserSig() == null){
+  <ul>
+    <header>
+      <nav>
+          <a href="">MonkeysResumeTool</a>
+          <div class="menu">
+          <a href="/register">Register</a>
+          <a href="/login">Login</a>
+          <a href="/about">About</a>
+          <a href="#support">Support</a>
+          </div>
+      </nav>
+  </header>
+   
+  </ul>
+  
+}
+@if(authService.currentUserSig()){
+  <ul>
+    
+    <header>
+      <nav>
+          <a href="">MonkeysResumeTool</a>
+          <div class="menu">
+          <span (click)="logout()">Logout</span>
+          <a href="/about">About</a>
+          <a href="#support">Support</a>
+          </div>
+      </nav>
+  </header>
+  </ul>
+}
 <router-outlet></router-outlet>
 <!--<style>
   :host {
