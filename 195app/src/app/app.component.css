@@ -1,169 +1,78 @@
-/* Reset list styles */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   background-color: #333;
 }
 
-/* Flex container for navigation items */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #1f1f1f;
+li {
+  float: left;
 }
 
-/* Style for navigation links */
-nav a {
+li a {
+  display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  display: block;
 }
 
 /* Change the link color to #111 (black) on hover */
-nav a:hover {
+li a:hover {
   background-color: #111;
 }
-
-/* Common body styles */
 body {
   background-color: #121212;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif; /* Changed to Montserrat as per previous style */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-}
+  }
 
-/* Flexbox for the menu items */
-.menu {
+  nav {
   display: flex;
-  align-items: center;
-}
-
-/* Logo image styles */
-.logo img {
-  height: 50px; /* Adjust based on your logo's size */
-  width: auto;
-}
-
-/* Main content padding */
-main {
+  justify-content: space-between;
   padding: 20px;
-}
+  background-color: #1f1f1f;
+  }
 
-/* Section background and padding */
-section {
+  nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  }
+
+  main {
+  padding: 20px;
+  }
+
+  section {
   background-color: #1f1f1f;
   padding: 20px;
   margin-bottom: 10px;
-}
+  }
 
-/* Heading margins */
-h1, h2 {
+  h1, h2 {
   margin: 0;
-}
+  }
 
-/* Button styles */
-button {
+  button {
   background-color: #333;
   color: #fff;
   border: none;
   padding: 10px;
   margin-top: 10px;
   cursor: pointer;
-}
+  }
 
-/* Footer styles */
-footer {
+  footer {
   background-color: #1f1f1f;
   padding: 20px;
   display: flex;
   justify-content: space-between;
-}
+  }
 
-/* Footer content styles */
-.footer-content p, .footer-logo {
+  .footer-content p, .footer-logo {
   margin: 0;
-}
-
-/* ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
   }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-    li a:hover {
-    background-color: #111;
-  }
-  body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    }
-
-    nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #1f1f1f;
-    }
-
-    nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-    }
-
-    main {
-    padding: 20px;
-    }
-
-    section {
-    background-color: #1f1f1f;
-    padding: 20px;
-    margin-bottom: 10px;
-    }
-
-    h1, h2 {
-    margin: 0;
-    }
-
-    button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    }
-
-    footer {
-    background-color: #1f1f1f;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    }
-
-    .footer-content p, .footer-logo {
-    margin: 0;
-    }
-     */

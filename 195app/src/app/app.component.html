@@ -1,26 +1,14 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 @if(authService.currentUserSig() == null){
   <ul>
     <header>
       <nav>
-        <div class="menu">
-          <a href="/login">Login</a>
+          <a href="">MonkeysResumeTool</a>
+          <div class="menu">
           <a href="/register">Register</a>
+          <a href="/login">Login</a>
           <a href="/about">About</a>
           <a href="#support">Support</a>
-        </div>
-        <div class="logo">
-          <a href="/">
-            <img src="195app/src/app/MonkeyResumeToolLogo.png" alt="MonkeysResumeTool">
-          </a>
-        </div>
+          </div>
       </nav>
   </header>
    
@@ -32,17 +20,12 @@
     
     <header>
       <nav>
-        <div class="menu">
-          <a href="/login">Login</a>
-          <a href="/register">Register</a>
+          <a href="">MonkeysResumeTool</a>
+          <div class="menu">
+          <span (click)="logout()">Logout</span>
           <a href="/about">About</a>
           <a href="#support">Support</a>
-        </div>
-        <div class="logo">
-          <a href="/">
-            <img src="195app/src/app/MonkeyResumeToolLogo.png" alt="MonkeysResumeTool">
-          </a>
-        </div>
+          </div>
       </nav>
   </header>
   </ul>
