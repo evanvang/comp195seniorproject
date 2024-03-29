@@ -1,4 +1,96 @@
+/* Reset list styles */
 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+/* Flex container for navigation items */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+}
+
+/* Style for navigation links */
+nav a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav a:hover {
+  background-color: #111;
+}
+
+/* Common body styles */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif; /* Changed to Montserrat as per previous style */
+  margin: 0;
+  padding: 0;
+}
+
+/* Flexbox for the menu items */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image styles */
+.logo img {
+  height: 50px; /* Adjust based on your logo's size */
+  width: auto;
+}
+
+/* Main content padding */
+main {
+  padding: 20px;
+}
+
+/* Section background and padding */
+section {
+  background-color: #1f1f1f;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+/* Heading margins */
+h1, h2 {
+  margin: 0;
+}
+
+/* Button styles */
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+  background-color: #1f1f1f;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Footer content styles */
+.footer-content p, .footer-logo {
+  margin: 0;
+}
+
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -17,9 +109,7 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
   }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
+    li a:hover {
     background-color: #111;
   }
   body {
@@ -76,4 +166,4 @@ ul {
     .footer-content p, .footer-logo {
     margin: 0;
     }
-    
+     */
