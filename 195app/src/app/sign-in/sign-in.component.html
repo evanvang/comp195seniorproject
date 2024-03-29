@@ -1,4 +1,124 @@
-<h1>Login</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - MonkeysResumeTool</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-form {
+    background-color: #1f1f1f;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+  }
+
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-field input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .form-field input:focus {
+    outline: none;
+    border-color: #555;
+    background-color: #444;
+  }
+
+  .login-form button {
+  padding: 10px 20px; 
+  border-radius: 4px;
+  border: none;
+  background-color:rgb(253, 238, 28); 
+  color: #000000;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+  width: auto; 
+}
+
+.login-form button:hover {
+  background-color: #66bb6a;
+}
+
+
+  .login-form button:hover {
+    background-color: rgb(253, 238, 28);
+  }
+
+  .login-form .register-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .login-form .register-link a {
+    color: rgb(253, 238, 28);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Sign In</h2>
+      <div class="form-field">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="Enter your Username">
+      </div>
+      <div class="form-field">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your Password">
+      </div>
+      <button type="submit">Sign In</button>
+      <div class="register-link">
+        <p>Don’t have an account? <a href="/register">Register here</a></p>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+
+<!-- <h1>Login</h1>
 
 <form [formGroup]="form" (ngSubmit)="signIn()">
   <div>
@@ -10,4 +130,4 @@
   <div>
     <button type="submit">Sign In</button>
   </div>
-</form>
+</form> -->
