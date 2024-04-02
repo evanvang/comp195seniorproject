@@ -91,7 +91,99 @@ body {
             }
     }
 
-    /* Update the responsive layout for section2 */
+    
+  body {
+    font-family: 'Montserrat';
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Montserrat';
+
+
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 15px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 40px 0; 
+  }
+
+  .MidsectionTitle {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 15px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 40px 0; 
+    font-size: 35px;
+
+  }
+
+  .section1Title{
+    font-size: 35px;
+    display: flex;
+  }
+
+  .section {
+    width: 100%; 
+    margin-bottom: 40px; 
+  }
+
+
+    .heading {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .section2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 0px 80px; 
+    }
+
+    .section2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px; 
+    }
+
+    .section2 > div, .section2 > .image-placeholder {
+    flex: 1; 
+    }
+
+    @media (min-width: 768px) {
+        .section2 {
+            flex-direction: row;
+        }
+
+        .section {
+            width: calc(50% - 20px); 
+            }
+            .content-with-image {
+            flex-direction: column;
+            }
+
+            .image-placeholder {
+            width: auto;
+            margin-top: 40px; 
+            }
+    }
+
     @media (max-width: 768px) {
         .section2 {
             flex-direction: column;
@@ -110,12 +202,12 @@ body {
 
     
     .image-placeholder {
-    flex-basis: 40%; /* Adjust as needed */
-    background-color: #ffffffee; /* White background for the placeholder */
-    display: block; /* Make sure it's a block element */
+    flex-basis: 40%; 
+    background-color: #ffffffee; 
+    display: block; 
     height: 400px;
     width: 600px; 
-    /* Specify a fixed height if you want a specific aspect ratio */
+
     }
 
    
