@@ -15,9 +15,9 @@
     margin: 0 auto;
     padding: 40px 15px;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap */
+    flex-wrap: wrap; 
     justify-content: space-between;
-    gap: 40px 0; /* Horizontal and vertical gap */
+    gap: 40px 0; 
   }
 
   .MidsectionTitle {
@@ -25,9 +25,9 @@
     margin: 0 auto;
     padding: 40px 15px;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap */
+    flex-wrap: wrap; 
     justify-content: space-between;
-    gap: 40px 0; /* Horizontal and vertical gap */
+    gap: 40px 0; 
     font-size: 35px;
 
   }
@@ -38,8 +38,8 @@
   }
 
   .section {
-    width: 100%; /* Full width for smaller screens or default state */
-    margin-bottom: 40px; /* Gap between rows */
+    width: 100%; 
+    margin-bottom: 40px; 
   }
 
 
@@ -58,7 +58,7 @@
         align-items: center;
         justify-content: space-between;
 
-        gap: 0px 80px; /* Horizontal and vertical gap */
+        gap: 0px 80px; 
     }
 
     .section2 {
@@ -66,33 +66,31 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 75px; /* Adjust the gap to your liking */
+    gap: 75px; 
     }
 
     .section2 > div, .section2 > .image-placeholder {
-    flex: 1; /* Make both the text div and the image div take up equal space */
+    flex: 1; 
     }
 
-    /* Assuming you want the text and the image side by side, we set flex-direction to row */
     @media (min-width: 768px) {
         .section2 {
             flex-direction: row;
         }
 
         .section {
-            width: calc(50% - 20px); /* Adjust width for 2 columns */
+            width: calc(50% - 20px); 
             }
             .content-with-image {
             flex-direction: column;
             }
 
             .image-placeholder {
-            width: auto; /* Full width on smaller screens */
-            margin-top: 40px; /* Space between text and image on smaller screens */
+            width: auto;
+            margin-top: 40px; 
             }
     }
 
-    /* Update the responsive layout for section2 */
     @media (max-width: 768px) {
         .section2 {
             flex-direction: column;
@@ -111,12 +109,12 @@
 
     
     .image-placeholder {
-    flex-basis: 40%; /* Adjust as needed */
-    background-color: #ffffffee; /* White background for the placeholder */
-    display: block; /* Make sure it's a block element */
+    flex-basis: 40%; 
+    background-color: #ffffffee; 
+    display: block; 
     height: 400px;
     width: 600px; 
-    /* Specify a fixed height if you want a specific aspect ratio */
+
     }
 
    

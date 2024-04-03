@@ -1,79 +1,78 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   }
-  
-  li {
-    float: left;
+
+  nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1f1f1f;
   }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+
+  nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
   }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #111;
+
+  main {
+  padding: 20px;
   }
-  body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    }
 
-    nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #1f1f1f;
-    }
+  section {
+  background-color: #1f1f1f;
+  padding: 20px;
+  margin-bottom: 10px;
+  }
 
-    nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-    }
+  h1, h2 {
+  margin: 0;
+  }
 
-    main {
-    padding: 20px;
-    }
+  button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  }
 
-    section {
-    background-color: #1f1f1f;
-    padding: 20px;
-    margin-bottom: 10px;
-    }
+  footer {
+  background-color: #1f1f1f;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  }
 
-    h1, h2 {
-    margin: 0;
-    }
-
-    button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    }
-
-    footer {
-    background-color: #1f1f1f;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    }
-
-    .footer-content p, .footer-logo {
-    margin: 0;
-    }
-    
+  .footer-content p, .footer-logo {
+  margin: 0;
+  }

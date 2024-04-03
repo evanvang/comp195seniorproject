@@ -1,54 +1,103 @@
-body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
+
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    }
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
 
-    nav {
+  .login-container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-container h1 {
+    color: #fff;
+  }
+
+  .error-message {
+    color: #e63946; /* Adjust error color as needed */
+    margin-bottom: 20px;
+  }
+
+  .login-form {
     background-color: #1f1f1f;
-    }
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+  }
 
-    nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-    }
+  .login-form .form-field {
+    margin-bottom: 20px;
+    position: relative;
+  }
 
-    main {
-    padding: 20px;
-    }
-
-    section {
-    background-color: #1f1f1f;
-    padding: 20px;
-    margin-bottom: 10px;
-    }
-
-    h1, h2 {
-    margin: 0;
-    }
-
-    button {
+  .login-form .form-field input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
     background-color: #333;
     color: #fff;
+  }
+
+  .login-form .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff; /* Color for the label text */
+  }
+
+  .error-message {
+  color: #e63946; 
+  text-align: center; 
+  margin-bottom: 20px;
+  }
+
+  .login-form h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .login-form .form-field input::placeholder {
+    color: #bbb;
+  }
+
+  .login-form .form-field input:focus {
+    outline: none;
+    background-color: #444;
+  }
+
+  .login-form .submit-button {
+    padding: 10px 20px;
+    border-radius: 4px;
     border: none;
-    padding: 10px;
-    margin-top: 10px;
+    background-color: rgb(253, 238, 28);
+    color: #000;
     cursor: pointer;
-    }
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
 
-    footer {
-    background-color: #1f1f1f;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    }
+  .login-form .submit-button:hover {
+    background-color: #66bb6a;
+  }
 
-    .footer-content p, .footer-logo {
-    margin: 0;
-    }
+  .login-form .register-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .login-form .register-link a {
+    color: rgb(253, 238, 28);
+    text-decoration: none;
+  }
