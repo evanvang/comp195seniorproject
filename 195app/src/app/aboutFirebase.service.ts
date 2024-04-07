@@ -9,42 +9,47 @@ import {
   setDoc,
 } from '@angular/fire/firestore';
 import { Observable, from } from 'rxjs';
-import { PersonInterface } from '../../src/app/about-page.interface';
+import { PersonInterface } from './my-profile/myprofile.interface';
 
 @Injectable({ providedIn: 'root' })
 export class PersonFirebaseService {
-  firestore = inject(Firestore);
-  personCollection = collection(this.firestore, 'persons');
+  firestore = inject(Firestore); // Inject Firestore service
+  personCollection = collection(this.firestore, 'persons'); // Reference to the persons collection in Firestore
 
+  // Fetches person details from Firestore and returns them as an Observable
   getPersonDetails(): Observable<PersonInterface[]> {
     return collectionData(this.personCollection, {
-      idField: 'id',
+      idField: 'id', // Uses document ID as the ID field in the returned data
     }) as Observable<PersonInterface[]>;
   }
 
-  addPersonDetails(bio: string, certs: string, other: string, projects: string, workexp: string): Observable<string> {
-    const personDetailsToCreate = { bio, certs, other, projects, workexp };
+  // Adds a new person's details to Firestore and returns the document ID as an Observable
+  addPersonDetails(name: string, bio: string, certs: string, other: string, projects: string, workexp: string): Observable<string> {
+    const personDetailsToCreate = { name, bio, certs, other, projects, workexp }; // Includes the new name field
     const promise = addDoc(this.personCollection, personDetailsToCreate).then(
-      (response) => response.id
+      (response) => response.id // Extracts and returns the new document ID
     );
     return from(promise);
   }
 
+  // Removes a person's details from Firestore using their document ID
   removePersonDetail(personId: string): Observable<void> {
-    const docRef = doc(this.firestore, 'persons/' + personId);
-    const promise = deleteDoc(docRef);
+    const docRef = doc(this.firestore, 'persons/' + personId); // Creates a reference to the specific document
+    const promise = deleteDoc(docRef); // Deletes the document
     return from(promise);
   }
 
+  // Updates a person's details in Firestore using their document ID
   updatePersonDetails(
     personId: string,
-    dataToUpdate: { bio: string; certs: string; other: string; projects: string; workexp: string }
+    dataToUpdate: { name?: string; bio?: string; certs?: string; other?: string; projects?: string; workexp?: string }
   ): Observable<void> {
-    const docRef = doc(this.firestore, 'persons/' + personId);
-    const promise = setDoc(docRef, dataToUpdate);
+    const docRef = doc(this.firestore, 'persons/' + personId); // Creates a reference to the specific document
+    const promise = setDoc(docRef, dataToUpdate, { merge: true }); // Updates the document with provided data, merging it with existing data
     return from(promise);
   }
 }
+
 
 
 // import { Injectable, inject } from '@angular/core';

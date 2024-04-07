@@ -10,7 +10,7 @@ import {
   ViewChild,
   inject,
 } from '@angular/core';
-import { PersonInterface } from '../about-page.interface';
+import { PersonInterface } from './myprofile.interface';
 import { CommonModule } from '@angular/common';
 import { PersonService } from '../about.service';
 import { PersonFirebaseService } from '../aboutFirebase.service';
@@ -22,15 +22,19 @@ import { PersonFirebaseService } from '../aboutFirebase.service';
   standalone: true,
   imports: [CommonModule],
 })
-export class PersonProfileComponent implements OnInit, OnChanges {
-  @Input({ required: true }) personDetails!: PersonInterface;
-  @Input({ required: true }) isEditing!: boolean;
-  @Output() setEditingId: EventEmitter<string | null> = new EventEmitter();
+export class MyProfileComponent implements OnInit, OnChanges {
+  @Input({ required: true }) personDetails!: PersonInterface; // Input property for person details
+  @Input({ required: true }) isEditing!: boolean; // Tracks if editing mode is active
+  @Output() setEditingId: EventEmitter<string | null> = new EventEmitter(); // Emits the editing ID
 
-  @ViewChild('textInput') textInput?: ElementRef;
+  @ViewChild('textInput') textInput?: ElementRef; // Accesses the text input element
 
+  // Services injection
   personService = inject(PersonService);
   personFirebaseService = inject(PersonFirebaseService);
+
+  // Local state for editing
+  editingName: string = '';
   editingBio: string = '';
   editingCerts: string = '';
   editingOther: string = '';
@@ -38,6 +42,8 @@ export class PersonProfileComponent implements OnInit, OnChanges {
   editingWorkexp: string = '';
 
   ngOnInit(): void {
+    // Initialize editing fields with current person details
+    this.editingName = this.personDetails.name;
     this.editingBio = this.personDetails.bio;
     this.editingCerts = this.personDetails.certs;
     this.editingOther = this.personDetails.other;
@@ -46,15 +52,16 @@ export class PersonProfileComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    // Focus on the text input when editing mode is activated
     if (changes['isEditing'].currentValue) {
-      setTimeout(() => {
-        this.textInput?.nativeElement.focus();
-      }, 0);
+      setTimeout(() => this.textInput?.nativeElement.focus(), 0);
     }
   }
 
   updatePersonDetails(): void {
+    // Constructs the updated data object
     const dataToUpdate = {
+      name: this.editingName,
       bio: this.editingBio,
       certs: this.editingCerts,
       other: this.editingOther,
@@ -62,19 +69,23 @@ export class PersonProfileComponent implements OnInit, OnChanges {
       workexp: this.editingWorkexp,
     };
 
+    // Updates details in Firebase and local service
     this.personFirebaseService
       .updatePersonDetails(this.personDetails.id, dataToUpdate)
       .subscribe(() => {
         this.personService.updatePersonDetails(this.personDetails.id, dataToUpdate);
       });
 
+    // Resets editing mode
     this.setEditingId.emit(null);
   }
 
   setPersonInEditMode(): void {
+    // Sets the current person ID for editing
     this.setEditingId.emit(this.personDetails.id);
   }
 }
+
 
 
 
@@ -149,7 +160,7 @@ export class PersonProfileComponent implements OnInit, OnChanges {
 //   }
 
   // Additional methods for updating other fields like certs, other, projects, and workexp
-}
+// }
 
 
 // import { Component } from '@angular/core';
