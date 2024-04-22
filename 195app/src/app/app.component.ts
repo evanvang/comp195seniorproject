@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { AuthService } from './auth.service';
+import { UsersService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,8 @@ import { AuthService } from './auth.service';
 export class AppComponent {
   title = '195app';
   authService = inject(AuthService)
+  usersService = inject(UsersService)
+  user$ = this.usersService.currentUserProfile$;
   ngOnInit(): void{
     this.authService.user$.subscribe(user => {
       if(user){

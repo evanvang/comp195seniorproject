@@ -1,0 +1,201 @@
+html {
+    height: 100%;
+    }
+
+    body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the body is at least the height of the viewport */
+
+    }
+
+    nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1f1f1f;
+    }
+
+    nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    }
+
+    main {
+    padding: 20px;
+    flex: 1; /* This will allow the main content to expand and push the footer down */
+    }
+
+    section {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin-bottom: 10px;
+    }
+
+    h1, h2 {
+    margin: 0;
+    }
+
+
+    button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 10px; /* Adjust horizontal padding to make buttons wider */
+    margin-top: 10px;
+    cursor: pointer;
+    width: auto; /* Set width to auto to adjust with content or set a specific width */
+    min-width: 100px; /* Set a minimum width if you want all buttons to have at least a certain width */
+    }
+
+    footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    position: fixed; /* Stick to bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out the footer sections */
+  }
+
+  .footer-section {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+  }
+
+  .footer-section p {
+    margin: 0 10px; /* Add space between the 'Coming Soon' texts */
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    margin-right: 10px;
+  }
+
+  .footer-disclaimer {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.75em;
+    text-align: right;
+  }
+
+
+
+    #header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0; /* Adjust padding as needed */
+    }
+
+    #header img {
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height to maintain aspect ratio */
+    border-radius: 50%; /* This creates the circular shape */
+    margin-bottom: 20px; /* Adds space between the image and the text */
+    object-fit: cover; /* Ensures the image covers the area without being stretched */
+    border: 3px solid #ffffff; /* Optional: Adds a white border around the image */
+    }
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-form {
+    background-color: #1f1f1f;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+  }
+
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-field input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .form-field input:focus {
+    outline: none;
+    border-color: #555;
+    background-color: #444;
+  }
+
+  .login-form button {
+  padding: 10px 20px; 
+  border-radius: 4px;
+  border: none;
+  background-color:rgb(253, 238, 28); 
+  color: #000000;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+  width: auto; 
+}
+
+.login-form button:hover {
+  background-color: #66bb6a;
+}
+
+
+  .login-form button:hover {
+    background-color: rgb(253, 238, 28);
+  }
+
+  .login-form .register-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .login-form .register-link a {
+    color: rgb(253, 238, 28);
+    text-decoration: none;
+  }
