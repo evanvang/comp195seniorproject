@@ -14,7 +14,7 @@ export class PersonService {
       other,
       projects,
       workexp,
-      name, // Add name here
+      name, 
       id,
     };
     this.personDetailsSig.update((details) => [...details, newPersonDetails]);
