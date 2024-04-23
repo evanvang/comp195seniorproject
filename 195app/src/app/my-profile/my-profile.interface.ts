@@ -6,4 +6,5 @@ export interface ProfileUser{
     other?: string;
     projects?: string;
     workexp?: string;
+    photoURL?: string;
 }

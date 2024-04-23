@@ -167,6 +167,41 @@ html {
     background-color: #444;
   }
 
+  .form-container {
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Simulate mat-elevation-z5 */
+    padding: 20px;
+    display: none; /* Initially hidden, will be shown via JavaScript if user exists */
+}
+.profile-image {
+    position: relative;
+    display: inline-block;
+}
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Simulate mat-elevation-z1 */
+}
+.edit-btn {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+input[type="file"] {
+    display: none;
+}
   .login-form button {
   padding: 10px 20px; 
   border-radius: 4px;

@@ -29,6 +29,11 @@ export class AuthService{
       password,
     ).then(()=> {});
     return from(promise);
+   /* return from(signInWithEmailAndPassword(
+      this.firebaseAuth,
+      email,
+      password,
+    ))*/
   }
   logout(): Observable<void>{
     const promise = signOut(this.firebaseAuth)

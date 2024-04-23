@@ -4,17 +4,24 @@ import { UsersService } from '../user.service';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { AuthService } from '../auth.service';
 import {MatInputModule} from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { NonNullableFormBuilder } from '@angular/forms';
 import { HotToastService } from '@ngneat/hot-toast';
-import { switchMap, tap } from 'rxjs';
+import { concatMap, of, switchMap, tap } from 'rxjs';
 import { ProfileUser } from './my-profile.interface';
+import { ImageUploadService } from '../image-upload.service';
+import { CommonModule } from '@angular/common';
+import { Firestore } from '@angular/fire/firestore';
+import { UserInfo } from 'os';
+import { User } from 'firebase/auth';
 @UntilDestroy()
 @Component({
   selector: 'app-my-profile',
   standalone: true,
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, CommonModule, MatToolbarModule, MatIconModule],
   templateUrl: './my-profile.component.html',
   styleUrl: './my-profile.component.css'
 })
@@ -22,6 +29,7 @@ export class MyProfileComponent implements OnInit{
   toast = inject(HotToastService)
   usersService = inject(UsersService)
   authService = inject(AuthService)
+  imageUploadService = inject(ImageUploadService)
   //fb = inject(NonNullableFormBuilder)
   user$ = this.usersService.currentUserProfile$
   profileForm: FormGroup;
@@ -34,7 +42,8 @@ export class MyProfileComponent implements OnInit{
       name: [''],
       other: [''],
       projects: [''],
-      workexp: ['']
+      workexp: [''],
+      photoURL: ['']
     });
   }
    /*constructor(
@@ -50,16 +59,34 @@ export class MyProfileComponent implements OnInit{
       });
   }
  
-
+  uploadFile(event: any) {
+    const { uid, photoURL } = this.profileForm.value;
+    this.imageUploadService
+      .uploadImage(event.target.files[0], `images/profile/${uid}`)
+      .pipe(
+        this.toast.observe({
+          loading: 'Uploading profile image...',
+          success: 'Image uploaded successfully',
+          error: 'There was an error in uploading the image',
+        }),
+        switchMap((photoURL) =>
+          this.usersService.updateUser({
+            uid,
+            photoURL,
+          })
+        )
+      )
+      .subscribe();
+  }
  saveProfile(){
-  const { uid, ...data } = this.profileForm.value;
+  const { uid, bio, certs, name, other, projects, workexp } = this.profileForm.value;
 
     if (!uid) {
       return;
     }
 
     this.usersService
-      .updateUser({ uid, ...data })
+      .updateUser({ uid,  bio, certs, name, other, projects, workexp })
       .pipe(
         this.toast.observe({
           loading: 'Saving profile data...',
