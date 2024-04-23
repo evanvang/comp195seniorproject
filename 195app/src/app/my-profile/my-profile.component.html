@@ -53,6 +53,68 @@
         <button type="submit">Submit</button>
       </div>
     </form>-->
+    <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
+      <div>
+        <label for="uid">UID:</label>
+        <input type="text" id="uid" formControlName="uid">
+      </div>
     
+      <div>
+        <label for="bio">Bio:</label>
+        <textarea id="bio" formControlName="bio"></textarea>
+      </div>
+    
+      <div>
+        <label for="certs">Certificates:</label>
+        <input type="text" id="certs" formControlName="certs">
+      </div>
+    
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+    
+      <div>
+        <label for="other">Other:</label>
+        <input type="text" id="other" formControlName="other">
+      </div>
+    
+      <div>
+        <label for="projects">Projects:</label>
+        <textarea id="projects" formControlName="projects"></textarea>
+      </div>
+    
+      <div>
+        <label for="workexp">Work Experience:</label>
+        <textarea id="workexp" formControlName="workexp"></textarea>
+      </div>
+    
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+      <div>
+        <label for="photoURL">Profile Photo:</label>
+        <input type="text" id="photoURL" formControlName="photoURL">
+    
+        <!-- Hidden file input for uploading files -->
+        <input #fileInput type="file" hidden (change)="uploadFile($event)">
+    
+        <!-- Image with click event linked to the hidden file input -->
+        <img [src]="profileForm.value.photoURL || '/assets/image-placeholder.png'" 
+             alt="Profile Photo" 
+             (click)="fileInput.click()" 
+             style="cursor: pointer;">
+    
+        <!-- Button to indicate editable image -->
+        <button mat-mini-fab (click)="fileInput.click()">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+    
+      <!-- Submit button -->
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
 
     
