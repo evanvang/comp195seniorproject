@@ -56,6 +56,41 @@ body {
   gap: 75px;
 }
 
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #1f1f1f;
+  font-size: 24px;
+  }
+
+  .section3 {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 75px; 
+  color: white;
+  }
+  
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
 .section2 > div, .section2 > .image-placeholder {
   flex: 1;
 }
