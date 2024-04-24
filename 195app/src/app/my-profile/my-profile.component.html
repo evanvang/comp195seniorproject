@@ -1,11 +1,15 @@
 <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
   <div class="profile-image">
-    <label for="photoURL">Profile Photo:</label>
+    <!-- <label for="photoURL">Profile Photo:</label> -->
     <img [src]="profileForm.value.photoURL || '/assets/image-placeholder.png'" alt="Profile Photo">
     <input #fileInput type="file" hidden (change)="uploadFile($event)">
     <div>
       <button type="submit">Save Profile</button>
     </div>
+   <!-- <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+  </div> -->
   </div>
 
 
@@ -13,7 +17,7 @@
     <mat-icon>edit</mat-icon>
   </button>
 
-  <div>
+  <div class="form-section">
     <label for="name">Name:</label>
     <input type="text" id="name" formControlName="name">
   </div>
