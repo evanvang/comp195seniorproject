@@ -53,17 +53,18 @@ form textarea:focus {
   object-fit: cover; /* Ensure the image covers the area */
 }
 
+.bottom-gap {
+padding-bottom: 10px;
 
+}
 
 /* Style for the edit button */
 .edit-btn {
-  position: absolute; /* Position it over the bottom right of the image */
   bottom: 25px;
-  right: calc(50% - 70px); /* Adjust this value to move the button over the image */
   background-color: #333; 
   color: #fff;
   border: none;
-  border-radius: 50%;
+  border-radius: 100%;
   width: 40px;
   height: 40px;
   cursor: pointer;

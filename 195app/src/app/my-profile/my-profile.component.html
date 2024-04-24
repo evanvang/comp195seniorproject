@@ -1,21 +1,23 @@
 <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
   <div class="profile-image">
-    <!-- <label for="photoURL">Profile Photo:</label> -->
-    <img [src]="profileForm.value.photoURL || '/assets/image-placeholder.png'" alt="Profile Photo">
+    <div>
+      <img [src]="profileForm.value.photoURL || '/assets/image-placeholder.png'" alt="Profile Photo">
+    </div>
     <input #fileInput type="file" hidden (change)="uploadFile($event)">
+    
+    <div class="bottom-gap">
+      <button type="button" class="edit-btn" (click)="fileInput.click()">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+
     <div>
       <button type="submit">Save Profile</button>
     </div>
-   <!-- <div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" formControlName="name">
-  </div> -->
+
   </div>
 
 
-  <button type="button" class="edit-btn" (click)="fileInput.click()">
-    <mat-icon>edit</mat-icon>
-  </button>
 
   <div class="form-section">
     <label for="name">Name:</label>
@@ -46,7 +48,6 @@
     <label for="other">Other:</label>
     <textarea id="other" formControlName="other" placeholder="Add any other information here"></textarea>
   </div>
-
 </form>
 
 
