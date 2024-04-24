@@ -1,4 +1,114 @@
-html {
+/* Base styles for the form */
+form {
+  max-width: 95%;
+  margin: 40px auto;
+  background-color: #1f1f1f; /* Dark background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff; /* Light text */
+}
+
+/* Style for all labels */
+form label {
+  font-size: 16px;
+  color: #aaa; /* Lighter text for labels */
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Style for all input fields and textareas */
+form input[type="text"],
+form textarea {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 20px; /* Space between fields */
+  background-color: #333; /* Darker background for input */
+  border: none;
+  border-radius: 5px;
+  color: #fff; /* Light text */
+  font-size: 14px;
+  resize: none;
+}
+
+/* Style for the input:focus and textarea:focus */
+form input[type="text"]:focus,
+form textarea:focus {
+  background-color: #444; /* Even darker background on focus */
+  outline: none; /* Remove the default focus outline */
+  resize: vertical;
+}
+
+/* Style for the profile photo section */
+.profile-image {
+  margin: 20px 0; /* More margin around the image */
+  text-align: center; /* Center the image and button */
+}
+
+.profile-image img {
+  width: 180px; /* Set image width */
+  height: 180px; /* Set image height */
+  border-radius: 50%; /* Circular image */
+  border: 2px solid #333; /* Border to make the image stand out */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.bottom-gap {
+padding-bottom: 10px;
+
+}
+
+/* Style for the edit button */
+.edit-btn {
+  bottom: 25px;
+  background-color: #333; 
+  color: #fff;
+  border: none;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Hide the default file input field */
+input[type="file"] {
+  display: none;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+  width: 10%;
+  padding: 15px;
+  background-color: #333; 
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover state for submit button */
+button[type="submit"]:hover {
+  background-color: rgb(253, 238, 28);  
+}
+
+.form-section {
+  margin-bottom: 10px; /* Space between form sections */
+  width: 109%;
+  
+}
+
+/* Adjust the padding for the submit button */
+button[type="submit"] {
+  padding: 10px;
+  font-weight: bold; /* Make the text bold */
+}
+
+
+
+/* ========================================== */
+/* html {
     height: 100%;
     }
 
@@ -10,8 +120,7 @@ html {
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Make sure the body is at least the height of the viewport */
-
+    min-height: 100vh; 
     }
 
     nav {
@@ -29,8 +138,7 @@ html {
 
     main {
     padding: 20px;
-    flex: 1; /* This will allow the main content to expand and push the footer down */
-    }
+    flex: 1; 
 
     section {
     background-color: #1f1f1f;
@@ -47,33 +155,33 @@ html {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 10px 10px; /* Adjust horizontal padding to make buttons wider */
+    padding: 10px 10px; 
     margin-top: 10px;
     cursor: pointer;
-    width: auto; /* Set width to auto to adjust with content or set a specific width */
-    min-width: 100px; /* Set a minimum width if you want all buttons to have at least a certain width */
+    width: auto; 
+    min-width: 100px; 
     }
 
     footer {
     background-color: #1f1f1f;
     padding: 20px;
-    position: fixed; /* Stick to bottom */
+    position: fixed; 
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space out the footer sections */
+    justify-content: space-between; 
   }
 
   .footer-section {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    justify-content: center; 
+    align-items: center; 
   }
 
   .footer-section p {
-    margin: 0 10px; /* Add space between the 'Coming Soon' texts */
+    margin: 0 10px; 
   }
 
   .footer-logo {
@@ -83,8 +191,8 @@ html {
   }
 
   .footer-logo img {
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
+    width: 50px; 
+    height: 50px; 
     margin-right: 10px;
   }
 
@@ -103,16 +211,16 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 50px 0; /* Adjust padding as needed */
+    padding: 50px 0; 
     }
 
     #header img {
-    width: 150px; /* Adjust width as needed */
-    height: 150px; /* Adjust height to maintain aspect ratio */
-    border-radius: 50%; /* This creates the circular shape */
-    margin-bottom: 20px; /* Adds space between the image and the text */
-    object-fit: cover; /* Ensures the image covers the area without being stretched */
-    border: 3px solid #ffffff; /* Optional: Adds a white border around the image */
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+    object-fit: cover; 
+    border: 3px solid #ffffff;
     }
     html, body {
     height: 100%;
@@ -169,9 +277,9 @@ html {
 
   .form-container {
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Simulate mat-elevation-z5 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
     padding: 20px;
-    display: none; /* Initially hidden, will be shown via JavaScript if user exists */
+    display: none; 
 }
 .profile-image {
     position: relative;
@@ -181,7 +289,7 @@ html {
     width: 120px;
     height: 120px;
     margin-top: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Simulate mat-elevation-z1 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
 }
 .edit-btn {
     position: absolute;
@@ -233,4 +341,4 @@ input[type="file"] {
   .login-form .register-link a {
     color: rgb(253, 238, 28);
     text-decoration: none;
-  }
+  } */
