@@ -1,110 +1,152 @@
-/* Base styles for the form */
 form {
-    max-width: 95%;
-    margin: 40px auto;
-    background-color: #1f1f1f; /* Dark background */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff; /* Light text */
-  }
-  
-  /* Style for all labels */
-  form label {
-    font-size: 16px;
-    color: #aaa; /* Lighter text for labels */
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  /* Style for all input fields and textareas */
-  form input[type="text"],
-  form textarea {
-    width: 90%;
-    padding: 15px;
-    margin-bottom: 20px; /* Space between fields */
-    background-color: #333; /* Darker background for input */
-    border: none;
-    border-radius: 5px;
-    color: #fff; /* Light text */
-    font-size: 14px;
-    resize: none;
-  }
-  
-  /* Style for the input:focus and textarea:focus */
-  form input[type="text"]:focus,
-  form textarea:focus {
-    background-color: #444; /* Even darker background on focus */
-    outline: none; /* Remove the default focus outline */
-    resize: vertical;
-  }
-  
-  /* Style for the profile photo section */
-  .profile-image {
-    margin: 20px 0; /* More margin around the image */
-    text-align: center; /* Center the image and button */
-  }
-  
-  .profile-image img {
-    width: 180px; /* Set image width */
-    height: 180px; /* Set image height */
-    border-radius: 50%; /* Circular image */
-    border: 2px solid #333; /* Border to make the image stand out */
-    object-fit: cover; /* Ensure the image covers the area */
-  }
-  
-  .bottom-gap {
+  max-width: 80%;
+  margin: 40px auto;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+form label {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 5px;
+  display: block;
+}
+
+form input[type="text"],
+form textarea {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  resize: none;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+  background-color: #444;
+  outline: none;
+  resize: vertical;
+}
+
+.profile-image {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.profile-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  object-fit: cover;
+}
+
+.bottom-gap {
   padding-bottom: 10px;
-  
-  }
-  
-  /* Style for the edit button */
-  .edit-btn {
-    bottom: 25px;
-    background-color: #333; 
-    color: #fff;
-    border: none;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-  }
-  
-  /* Hide the default file input field */
-  input[type="file"] {
-    display: none;
-  }
-  
-  /* Style for the submit button */
-  button[type="submit"] {
-    width: 10%;
-    padding: 15px;
-    background-color: #333; 
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  /* Hover state for submit button */
-  button[type="submit"]:hover {
-    background-color: rgb(253, 238, 28);  
-  }
-  
-  .form-section {
-    margin-bottom: 10px; /* Space between form sections */
-    width: 109%;
-    
-  }
-  
-  /* Adjust the padding for the submit button */
-  button[type="submit"] {
-    padding: 10px;
-    font-weight: bold; /* Make the text bold */
-  }
-  
+}
+
+.edit-btn {
+  bottom: 25px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button[type="submit"] {
+  width: 10%;
+  padding: 15px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="search"]:hover {
+  background-color: rgb(253, 238, 28);
+}
+
+.search-container button:hover {
+  background-color: rgb(253, 238, 28);
+}
+
+.form-section {
+  margin-bottom: 10px;
+  width: 95%;
+
+}
+
+button[type="submit"] {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+ul li {
+  background: #1f1f1f;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+}
+
+.search-container input[type="text"],
+.search-container button {
+  background-color: #333;
+  color: #ffffff;
+  font-size: 18px;
+  width: 40%;
+  display: inline-block;
+}
+
+.search-container button {
+  width: 10%;
+  padding: 15px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(253, 238, 28);
+}
+
   
   
   /* ========================================== */

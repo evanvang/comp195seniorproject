@@ -1,55 +1,58 @@
-<div>
+<!-- <div>
+    <input type="text" [(ngModel)]="searchName" placeholder="Search by name">
+    <button (click)="search()">Search</button>
+  </div> -->
+
+  <div class="search-container">
     <input type="text" [(ngModel)]="searchName" placeholder="Search by name">
     <button (click)="search()">Search</button>
   </div>
   
-  <!-- List of Search Results -->
   <ul>
     <li *ngFor="let userProfile of userProfiles" (click)="selectProfile(userProfile.uid)">
       <img [src]="userProfile.photoURL || '/assets/image-placeholder.png'" alt="User Image" style="width:50px; height:50px; border-radius:50%;"> 
       {{ userProfile.name }} - Click to view
       <div *ngIf="selectedProfile?.uid === userProfile.uid">
         <div *ngIf="selectedProfile">
-            <form [formGroup]="profileForm" class="mt-3">
-                <div class="form-section">
-                    <img [src]="profileForm.value.photoURL || '/assets/image-placeholder.png'" alt="Profile Photo">
-                  </div>
-                <div class="form-section">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" formControlName="name">
-                  </div>
-                
-                  <div class="form-section">
-                    <label for="bio">Bio:</label>
-                    <textarea id="bio" formControlName="bio" placeholder="Add your biography here"></textarea>
-                  </div>
-                
-                  <div class="form-section">
-                    <label for="workexp">Work Experience:</label>
-                    <textarea id="workexp" formControlName="workexp" placeholder="Add your work experience here"></textarea>
-                  </div>
-                
-                  <div class="form-section">
-                    <label for="certs">Certifications:</label>
-                    <textarea id="certs" formControlName="certs" placeholder="Add your certifications here"></textarea>
-                  </div>
-                
-                  <div class="form-section">
-                    <label for="projects">Projects:</label>
-                    <textarea id="projects" formControlName="projects" placeholder="List your projects here"></textarea>
-                  </div>
-                
-                  <div class="form-section">
-                    <label for="other">Other:</label>
-                    <textarea id="other" formControlName="other" placeholder="Add any other information here"></textarea>
-                  </div>
-                <!-- Add other form fields as needed -->
-            </form>
+          <form [formGroup]="profileForm" class="mt-3">
+            <div class="form-section">
+                <img [src]="profileForm.value.photoURL || '/assets/image-placeholder.png'" alt="Profile Photo">
+              </div>
+            <div class="form-section">
+                <label for="name">Name:</label>
+                <input type="text" id="name" formControlName="name" readonly>
+              </div>
+            
+              <div class="form-section">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" formControlName="bio" placeholder="Add your biography here" readonly></textarea>
+              </div>
+            
+              <div class="form-section">
+                <label for="workexp">Work Experience:</label>
+                <textarea id="workexp" formControlName="workexp" placeholder="Add your work experience here" readonly></textarea>
+              </div>
+            
+              <div class="form-section">
+                <label for="certs">Certifications:</label>
+                <textarea id="certs" formControlName="certs" placeholder="Add your certifications here" readonly></textarea>
+              </div>
+            
+              <div class="form-section">
+                <label for="projects">Projects:</label>
+                <textarea id="projects" formControlName="projects" placeholder="List your projects here" readonly></textarea>
+              </div>
+            
+              <div class="form-section">
+                <label for="other">Other:</label>
+                <textarea id="other" formControlName="other" placeholder="Add any other information here" readonly></textarea>
+              </div>
+          </form>          
         </div>
       </div>
     </li>
   
   </ul>
 
-    <!-- Conditionally Displayed Profile Form -->
+
     
