@@ -43,6 +43,10 @@
                     <label for="other">Other:</label>
                     <textarea id="other" formControlName="other" placeholder="Add any other information here"></textarea>
                   </div>
+                  <div>
+                    <!-- Optionally display the uploaded resume link or image -->
+                    <a [href]="profileForm.value.resumeURL" target="_blank">Download Resume</a>
+                  </div>
                 <!-- Add other form fields as needed -->
             </form>
         </div>

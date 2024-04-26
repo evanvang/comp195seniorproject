@@ -40,7 +40,8 @@ export class SearchComponent {
       other: [''],
       projects: [''],
       workexp: [''],
-      photoURL: ['']
+      photoURL: [''],
+      resumeURL: ['']
     });
   }
   search() {

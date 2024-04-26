@@ -14,10 +14,7 @@
     <div>
       <button type="submit">Save Profile</button>
     </div>
-
   </div>
-
-
 
   <div class="form-section">
     <label for="name">Name:</label>
@@ -48,129 +45,15 @@
     <label for="other">Other:</label>
     <textarea id="other" formControlName="other" placeholder="Add any other information here"></textarea>
   </div>
-</form>
 
-
-
-    <!-- ====================   Current Working    ====================== -->
-
-<!--     
-    <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
-      <div>
-        <label for="uid">UID:</label>
-        <input type="text" id="uid" formControlName="uid">
-      </div>
-    
-      <div>
-        <label for="bio">Bio:</label>
-        <textarea id="bio" formControlName="bio"></textarea>
-      </div>
-    
-      <div>
-        <label for="certs">Certificates:</label>
-        <input type="text" id="certs" formControlName="certs">
-      </div>
-    
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" formControlName="name">
-      </div>
-    
-      <div>
-        <label for="other">Other:</label>
-        <input type="text" id="other" formControlName="other">
-      </div>
-    
-      <div>
-        <label for="projects">Projects:</label>
-        <textarea id="projects" formControlName="projects"></textarea>
-      </div>
-    
-      <div>
-        <label for="workexp">Work Experience:</label>
-        <textarea id="workexp" formControlName="workexp"></textarea>
-      </div>
-    
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-      <div>
-        <label for="photoURL">Profile Photo:</label>
-        <input type="text" id="photoURL" formControlName="photoURL">
-     
-        <input #fileInput type="file" hidden (change)="uploadFile($event)">
-    
-        <img [src]="profileForm.value.photoURL || '/assets/image-placeholder.png'" 
-             alt="Profile Photo" 
-             (click)="fileInput.click()" 
-             style="cursor: pointer;">
-    
-        <button mat-mini-fab (click)="fileInput.click()">
-          <mat-icon>edit</mat-icon>
-        </button>
-      </div>
-    
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form> -->
-
-    
-
-
-    <!-- ========================================== -->
-
-    
-   <!-- <h1>Update Profile</h1>
-    <div class="profile-image">
-      <img
-        width="120"
-        height="120"
-        class="margin-top mat-elevation-z1"
-        src='/assets/image-placeholder.png'
-      />
-      <button mat-mini-fab (click)="inputField.click()">
-        <mat-icon>edit</mat-icon>
-      </button>
+  <!-- Resume Upload Section -->
+  <div class="form-section resume-upload">
+    <label for="resume">Upload Resume:</label>
+    <input #resumeInput type="file" hidden (change)="resumeUpload($event)">
+    <button type="button" (click)="resumeInput.click()">Upload Resume</button>
+    <div>
+      <!-- Optionally display the uploaded resume link or image -->
+      <a [href]="profileForm.value.resumeURL" target="_blank">Download Resume</a>
     </div>
-    <input #inputField hidden type="file" (change)="uploadFile($event)" />
-    <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
-      <div>
-        <label for="uid">UID:</label>
-        <input type="text" id="uid" formControlName="uid">
-      </div>
-    
-      <div>
-        <label for="bio">Bio:</label>
-        <textarea id="bio" formControlName="bio"></textarea>
-      </div>
-    
-      <div>
-        <label for="certs">Certificates:</label>
-        <input type="text" id="certs" formControlName="certs">
-      </div>
-    
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" formControlName="name">
-      </div>
-    
-      <div>
-        <label for="other">Other:</label>
-        <input type="text" id="other" formControlName="other">
-      </div>
-    
-      <div>
-        <label for="projects">Projects:</label>
-        <textarea id="projects" formControlName="projects"></textarea>
-      </div>
-    
-      <div>
-        <label for="workexp">Work Experience:</label>
-        <textarea id="workexp" formControlName="workexp"></textarea>
-      </div>
-    
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>-->
+  </div>
+</form>

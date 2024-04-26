@@ -43,7 +43,8 @@ export class MyProfileComponent implements OnInit{
       other: [''],
       projects: [''],
       workexp: [''],
-      photoURL: ['']
+      photoURL: [''],
+      resumeURL: ['']
     });
   }
    /*constructor(
@@ -60,7 +61,7 @@ export class MyProfileComponent implements OnInit{
   }
  
   uploadFile(event: any) {
-    const { uid, photoURL } = this.profileForm.value;
+    const { uid, resumeURL } = this.profileForm.value;
     this.imageUploadService
       .uploadImage(event.target.files[0], `images/profile/${uid}`)
       .pipe(
@@ -73,6 +74,25 @@ export class MyProfileComponent implements OnInit{
           this.usersService.updateUser({
             uid,
             photoURL,
+          })
+        )
+      )
+      .subscribe();
+  }
+  resumeUpload(event: any) {
+    const { uid, resumeURL } = this.profileForm.value;
+    this.imageUploadService
+      .uploadImage(event.target.files[0], `resumes/profile/${uid}`)
+      .pipe(
+        this.toast.observe({
+          loading: 'Uploading profile image...',
+          success: 'Image uploaded successfully',
+          error: 'There was an error in uploading the image',
+        }),
+        switchMap((resumeURL) =>
+          this.usersService.updateUser({
+            uid,
+            resumeURL,
           })
         )
       )
