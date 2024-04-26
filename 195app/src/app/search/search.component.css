@@ -1,0 +1,344 @@
+/* Base styles for the form */
+form {
+    max-width: 95%;
+    margin: 40px auto;
+    background-color: #1f1f1f; /* Dark background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Light text */
+  }
+  
+  /* Style for all labels */
+  form label {
+    font-size: 16px;
+    color: #aaa; /* Lighter text for labels */
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Style for all input fields and textareas */
+  form input[type="text"],
+  form textarea {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 20px; /* Space between fields */
+    background-color: #333; /* Darker background for input */
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* Light text */
+    font-size: 14px;
+    resize: none;
+  }
+  
+  /* Style for the input:focus and textarea:focus */
+  form input[type="text"]:focus,
+  form textarea:focus {
+    background-color: #444; /* Even darker background on focus */
+    outline: none; /* Remove the default focus outline */
+    resize: vertical;
+  }
+  
+  /* Style for the profile photo section */
+  .profile-image {
+    margin: 20px 0; /* More margin around the image */
+    text-align: center; /* Center the image and button */
+  }
+  
+  .profile-image img {
+    width: 180px; /* Set image width */
+    height: 180px; /* Set image height */
+    border-radius: 50%; /* Circular image */
+    border: 2px solid #333; /* Border to make the image stand out */
+    object-fit: cover; /* Ensure the image covers the area */
+  }
+  
+  .bottom-gap {
+  padding-bottom: 10px;
+  
+  }
+  
+  /* Style for the edit button */
+  .edit-btn {
+    bottom: 25px;
+    background-color: #333; 
+    color: #fff;
+    border: none;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  /* Hide the default file input field */
+  input[type="file"] {
+    display: none;
+  }
+  
+  /* Style for the submit button */
+  button[type="submit"] {
+    width: 10%;
+    padding: 15px;
+    background-color: #333; 
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover state for submit button */
+  button[type="submit"]:hover {
+    background-color: rgb(253, 238, 28);  
+  }
+  
+  .form-section {
+    margin-bottom: 10px; /* Space between form sections */
+    width: 109%;
+    
+  }
+  
+  /* Adjust the padding for the submit button */
+  button[type="submit"] {
+    padding: 10px;
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  
+  
+  /* ========================================== */
+  /* html {
+      height: 100%;
+      }
+  
+      body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Montserrat';
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; 
+      }
+  
+      nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #1f1f1f;
+      }
+  
+      nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      }
+  
+      main {
+      padding: 20px;
+      flex: 1; 
+  
+      section {
+      background-color: #1f1f1f;
+      padding: 20px;
+      margin-bottom: 10px;
+      }
+  
+      h1, h2 {
+      margin: 0;
+      }
+  
+  
+      button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 10px; 
+      margin-top: 10px;
+      cursor: pointer;
+      width: auto; 
+      min-width: 100px; 
+      }
+  
+      footer {
+      background-color: #1f1f1f;
+      padding: 20px;
+      position: fixed; 
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+    }
+  
+    .footer-section {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+    }
+  
+    .footer-section p {
+      margin: 0 10px; 
+    }
+  
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .footer-logo img {
+      width: 50px; 
+      height: 50px; 
+      margin-right: 10px;
+    }
+  
+    .footer-disclaimer {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 0.75em;
+      text-align: right;
+    }
+  
+  
+  
+      #header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 50px 0; 
+      }
+  
+      #header img {
+      width: 150px; 
+      height: 150px; 
+      border-radius: 50%; 
+      margin-bottom: 20px; 
+      object-fit: cover; 
+      border: 3px solid #ffffff;
+      }
+      html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+  
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  
+    .login-form {
+      background-color: #1f1f1f;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+  
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .form-field {
+      margin-bottom: 20px;
+    }
+  
+    .form-field label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  
+    .form-field input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+  
+    .form-field input:focus {
+      outline: none;
+      border-color: #555;
+      background-color: #444;
+    }
+  
+    .form-container {
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+      padding: 20px;
+      display: none; 
+  }
+  .profile-image {
+      position: relative;
+      display: inline-block;
+  }
+  .profile-image img {
+      width: 120px;
+      height: 120px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  }
+  .edit-btn {
+      position: absolute;
+      top: 80px;
+      left: 80px;
+      width: 40px;
+      height: 40px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+  }
+  input[type="file"] {
+      display: none;
+  }
+    .login-form button {
+    padding: 10px 20px; 
+    border-radius: 4px;
+    border: none;
+    background-color:rgb(253, 238, 28); 
+    color: #000000;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: auto; 
+  }
+  
+  .login-form button:hover {
+    background-color: #66bb6a;
+  }
+  
+  
+    .login-form button:hover {
+      background-color: rgb(253, 238, 28);
+    }
+  
+    .login-form .register-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .login-form .register-link a {
+      color: rgb(253, 238, 28);
+      text-decoration: none;
+    } */
