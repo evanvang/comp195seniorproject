@@ -67,7 +67,9 @@ export class SearchComponent {
     if (profile) {
       this.selectedProfile = profile; // Store the selected profile
       this.profileForm.reset({...profile}); // Patch the form with the selected profile
+      if(!this.showForm){
       this.toggleForm(); // You can directly call toggleForm to flip the visibility
+      }
     } else {
       console.error('Profile not found!');
     }
