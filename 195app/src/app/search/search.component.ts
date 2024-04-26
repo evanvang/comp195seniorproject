@@ -29,6 +29,7 @@ export class SearchComponent {
   searchName: string = "";
   userProfiles: any[] = [];
   selectedProfile: any = null;
+  showForm: boolean = false;
   profileForm: FormGroup;
   constructor(private fb: FormBuilder) {
     this.profileForm = this.fb.group({
@@ -43,18 +44,38 @@ export class SearchComponent {
     });
   }
   search() {
+    this.showForm = false
     this.usersService.findUser(this.searchName).subscribe(
       profiles => {
         this.userProfiles = profiles;  // Store all profiles returned by the search
       },
       error => {
         console.error('Error fetching user profiles:', error);
-      }
+      },
     );
   }
 
-  selectProfile(profile: any) {
+  /*selectProfile(profile: any) {
     this.selectedProfile = profile; // Store the selected profile
     this.profileForm.patchValue(profile); // Patch the form with the selected profile
+    this.showForm = !this.showForm;
+  }*/
+  selectProfile(profileId: number) {
+    // Find the profile with the matching ID
+    const profile = this.userProfiles.find(p => p.uid === profileId);
+  
+    if (profile) {
+      this.selectedProfile = profile; // Store the selected profile
+      this.profileForm.reset({...profile}); // Patch the form with the selected profile
+      this.toggleForm(); // You can directly call toggleForm to flip the visibility
+    } else {
+      console.error('Profile not found!');
+    }
+  }
+  toggleForm() {
+    this.showForm = !this.showForm;
+  }
+  formFalse(){
+    this.showForm = false
   }
 }

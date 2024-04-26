@@ -5,12 +5,13 @@
   
   <!-- List of Search Results -->
   <ul>
-    <li *ngFor="let userProfile of userProfiles" (click)="selectProfile(userProfile)">
-      {{ userProfile.name }} - Click to view/edit
+    <li *ngFor="let userProfile of userProfiles" (click)="selectProfile(userProfile.uid)">
+      {{ userProfile.name }} - Click to view
     </li>
   </ul>
 
     <!-- Conditionally Displayed Profile Form -->
+    <div *ngIf="showForm">
     <div *ngIf="selectedProfile">
         <form [formGroup]="profileForm" class="mt-3">
             <div class="form-section">
@@ -48,3 +49,4 @@
             <!-- Add other form fields as needed -->
         </form>
     </div>
+  </div>
